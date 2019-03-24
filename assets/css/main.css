@@ -16,12 +16,10 @@
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
-
-
 }
 nav {
 	width: 100%;
-	height: auto;
+	min-height: 50px;
 	background: #364f6b;
 }
 nav ul{
@@ -66,7 +64,7 @@ nav a:hover {
 	width:250px;
 	min-height: 250px;
 	border-radius: 10px;
-	background:#fff;
+	background: #fff;
 	-webkit-box-shadow: 0 0 5px 0 #d4d4d4;
 	        box-shadow: 0 0 5px 0 #d4d4d4;
 	margin: 8px;
@@ -79,6 +77,8 @@ nav a:hover {
 }
 .service h2{
 	font-weight: lighter;
+    padding: 25px 0 0 0;
+    font-size: 18px;
 }
 .service a{
 	padding: 50px;
@@ -88,7 +88,7 @@ nav a:hover {
 
 }
 .icon{
-	font-size: 10em;
+	font-size: 6em;
 	background: #FFB75E;  /* fallback for old browsers */
 	background: -webkit-linear-gradient(to right, #ED8F03, #FFB75E);  /* Chrome 10-25, Safari 5.1-6 */
 	background: -webkit-gradient(linear, left top, right top, from(#ED8F03), to(#FFB75E));
@@ -240,4 +240,45 @@ footer{
 	background: #07689f;
 	border:3px solid #07689f;
 	color: #fff;
+}
+.resposive{
+	position: absolute;
+	display: none;
+    left: 15px;
+    top: 0.6em;
+    border: 1px solid #fff;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+    background: none;
+    color: #fff;
+}
+@media screen and (max-width: 570px) {
+	.resposive{
+		display: block;
+	}
+	nav ul {
+		display: none; 
+	}
+	.service{
+		width: 225px;
+	}
+	.submit-request{
+	    line-height: 0.4;
+        font-size: 16px;
+	    padding: 15px 0.7em;
+	}
+}
+@media screen and (max-width: 500px) {
+	.service{
+		width: 100%;
+	    height: auto;
+	}
+	.submit-request{
+	    line-height: 0.4;
+        font-size: 16px;
+	    padding: 15px 0.7em;
+	}
 }
