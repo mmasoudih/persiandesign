@@ -28,9 +28,9 @@ nav ul{
 	display: flex;
 	padding:12px 50px 10px 10px;
 	overflow: hidden;
+	transform: translateX(0);
 }
 nav a {
-
 	color:#fff;
 	padding:15px 10px;
 	text-decoration:none;
@@ -192,7 +192,7 @@ footer{
 
 }
 .contact-form form{
-	width: 50%;
+	width: 80%;
 	padding: 10px;
 	display: flex;
 	flex-direction: row;
@@ -244,23 +244,52 @@ footer{
 .resposive{
 	position: absolute;
 	display: none;
-    left: 15px;
-    top: 0.6em;
-    border: 1px solid #fff;
+    left: 10px;
+    top: 10px;
+    border: none;
     padding: 5px;
     font-size: 16px;
-    border-radius: 2px;
+    border-radius: 3px;
     outline: none;
     cursor: pointer;
     background: none;
     color: #fff;
+    background: #ff9966;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #ff5e62, #ff9966);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #ff5e62, #ff9966); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+.showmenu{
+	transform: translateX(0);
 }
 @media screen and (max-width: 570px) {
 	.resposive{
 		display: block;
+		z-index: 2;
+		position: fixed;
 	}
 	nav ul {
-		display: none; 
+		transform: translateX(800px);
+	    width: 100%;
+	    padding: 0;
+	    height: 100%;
+	    z-index: 1;
+	    flex-direction: column;
+	    position: fixed;
+	    background: url("../images/trianglify.svg") no-repeat top left;
+	    text-shadow: 0 0 5px #000;
+		transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+	}
+	nav li{
+	    border-bottom: 1px solid #ddd;
+	    text-align: center;
+	}
+	nav a{
+		display: block;
+
+	}
+	.contact-form form{
+		width: 100%;
 	}
 	.service{
 		width: 225px;
@@ -282,3 +311,4 @@ footer{
 	    padding: 15px 0.7em;
 	}
 }
+ 

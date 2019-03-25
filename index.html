@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="assets/css/nprogress.css">
 	<link rel="stylesheet" href="assets/css/swiper.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	
 	<title>پرشین دیزاین</title>
 </head>
@@ -71,6 +72,7 @@
 		<p>  حقوق برای تیم پرشین دیزاین محفوظ می باشد. &copy;</p>
 	</footer>
 	</div>
+
 <script src="assets/js/nprogress.js"></script>
 <script>
 	NProgress.start();
@@ -79,6 +81,12 @@
 	NProgress.configure({ ease: 'ease', speed: 2000 });
 	NProgress.configure({ parent: 'body' });
 	NProgress.done();
+
+	$(document).ready(function(){
+		$(".resposive").click(function(){
+			$("nav ul").toggleClass("showmenu");
+		});
+	});
 </script>
 </body>
 </html>

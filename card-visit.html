@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="assets/css/nprogress.css">
 	<link rel="stylesheet" href="assets/css/swiper.min.css">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 	<title>پرشین دیزاین - طراحی کارت ویزیت</title>
 </head>
@@ -55,6 +56,12 @@
 	NProgress.configure({ ease: 'ease', speed: 2000 });
 	NProgress.configure({ parent: 'body' });
 	NProgress.done();
+
+	$(document).ready(function(){
+		$(".resposive").click(function(){
+			$("nav ul").toggleClass("showmenu");
+		});
+	});
 </script>
 </body>
 </html>
