@@ -161,6 +161,7 @@ footer{
 	padding: 1em;
 	font-size: 2em;
 	font-weight: lighter;
+	text-align: center;
 }
 .submit-request{
 	width: 50%;
@@ -209,7 +210,7 @@ footer{
 .row label{
 	display: block;
 }
-.row input[type="text"]{
+.row input[type="text"],textarea{
 	width: 100%;
 	font-family: "Vazir";
 	font-weight: lighter;
@@ -218,8 +219,9 @@ footer{
 	border-radius: 5px;
 	border:1px solid #ddd;
 	padding:12px;
+	resize: none;
 }
-.contact-form form input[type="submit"]{
+.contact-form form input[type="button"]{
 	font-family: "Vazir";
 	font-weight: lighter;
 	background: #fff;
@@ -236,7 +238,7 @@ footer{
 	transition: background .2s ease-in-out;
 
 }
-.contact-form form input[type="submit"]:hover{
+.contact-form form input[type="button"]:hover{
 	background: #07689f;
 	border:3px solid #07689f;
 	color: #fff;
@@ -261,6 +263,11 @@ footer{
 }
 .showmenu{
 	transform: translateX(0);
+}
+.require:before{
+	content: "*";
+	vertical-align: text-top; 
+	color: red;
 }
 @media screen and (max-width: 570px) {
 	.resposive{
