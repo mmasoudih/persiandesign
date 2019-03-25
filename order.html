@@ -58,7 +58,7 @@
 	</footer>
 
 	</div>
-
+<script src="https://smtpjs.com/v3/smtp.js"></script>
 <script src="assets/js/nprogress.js"></script>
 <script>
 	NProgress.start();
@@ -73,6 +73,19 @@
 			$("nav ul").toggleClass("showmenu");
 		});
 	});
+
+
+	Email.send({
+    Host : "smtp.elasticemail.com:2525",
+    Username : "mohammad.masoudi59@gmail.com",
+    Password : "1cf3bed0-8d35-4fe1-9b17-0a4a624a8412",
+    To : 'mohammad.masoudi59@gmail.com',
+    From : "mohammad.masoudi59@gmail.com",
+    Subject : "This is the subject",
+    Body : "And this is the body"
+	}).then(
+	  message => alert(message)
+	);
 </script>
 
 
