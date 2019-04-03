@@ -28,6 +28,11 @@
 				<li><a href="#">تماس با ما</a></li>
 				<li><a href="#">درباره ما</a></li>
 			</ul>
+			<div id="toggle">
+			  <div class="one"></div>
+			  <div class="two"></div>
+			  <div class="three"></div>
+			</div>
 		</nav>
 	</header>
 	<main>
@@ -62,9 +67,10 @@
 	NProgress.configure({ parent: 'body' });
 	NProgress.done();
 
-	$(document).ready(function(){
-		$(".resposive").click(function(){
-			$("nav ul").toggleClass("showmenu");
+	$(document).ready(function () {
+			$("#toggle").click(function() {
+  				$(this).toggleClass("on");
+  				$("nav ul").toggleClass("showmenu");
 		});
 	});
 </script>
