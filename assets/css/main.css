@@ -1,6 +1,6 @@
 @import url(reset.css);
 @import url(fonts.css);
-.container{
+.main-container{
 	width: 100%;
 	height: 100vh;
 	direction: rtl;
