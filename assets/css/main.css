@@ -384,7 +384,7 @@ footer{
 		position: fixed;
 	}
 	nav ul {
-		transform: translateX(800px);
+		transform: translateX(600px);
 	    width: 100%;
 	    padding: 0;
 	    height: 100%;
