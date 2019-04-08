@@ -62,7 +62,14 @@
 					<label for="description" class="require">توضیحات</label>
 					<textarea name="" id="description" cols="30" rows="10" placeholder="درخواست خودتون رو به صورت کامل بنویسید "></textarea>
 				</div>
-					<input id="send" class="send-order" type="button" onclick="sendMail();" name="" value="ثبت سفارش">
+					<button id="send" class="send-order" type="button" onclick="sendMail();" name="">
+						<span></span>
+						<span></span>
+						<span></span>
+						<span></span>
+						ثبت سفارش
+					</button>
+
 	        </form>
 		</section>
 	</main>
@@ -114,7 +121,7 @@ function sendMail(){
 	}else{
 		Email.send({
 	    SecureToken : "35a80d7b-2315-422e-a72c-bcdfbe8a3704",
-	    To : 'persiandesign1398@gmail.com', //mohammad.masoudi59@gmail.com
+	    To : 'mohammad.masoudi59@gmail.com',
 	    From : "persiandesign.sender@gmail.com",
 	    Subject : name.value,
 	    Body : "تلفن : " + "<b>" + phone.value + "</b>"  + "<br/> ایمیل : " + "<b>" + email.value + "</b>" + "<br/> ایدی تلگرام : " + "<b>" + telegram.value + "</b>" + "<br/> توضیحات :  <br/>" + description.value 
