@@ -95,11 +95,17 @@
 	NProgress.done();
 
 	$(document).ready(function () {
-			$("#toggle").click(function() {
-  				$(this).toggleClass("on");
-  				$("nav ul").toggleClass("showmenu");
+			$("#toggle").click(function () {
+				$(this).toggleClass("on");
+				$("nav ul").toggleClass("showmenu");
+				$("main , footer").toggleClass("opacity")
+				$("main , footer").click(function () {
+					$("#toggle").removeClass("on")
+					$("nav ul").removeClass("showmenu")
+					$("main , footer").removeClass("opacity")
+				})
+			});
 		});
-	});
 
 
 </script>
